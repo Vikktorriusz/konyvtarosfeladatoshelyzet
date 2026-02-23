@@ -27,16 +27,16 @@ namespace konyvtar
                 {
                     for (int j = i + 1; j < ifjusagi.Count; j++)
                     {
-                        if (ifjusagi[i].ar > ifjusagi[j].ar)
+                        if (ifjusagi[i].ar < ifjusagi[j].ar)
                         {
-                            Konyv tmp = ifjusagi[i];
+                            Konyv seged = ifjusagi[i];
                             ifjusagi[i] = ifjusagi[j];
-                            ifjusagi[j] = tmp;
+                            ifjusagi[j] = seged;
                         }
                     }
                 }
 
-                Console.WriteLine("ifjusiagi regények ár sorrendben ilyen csökkenő:");
+                Console.WriteLine("ifjusiagi regények ár sorrendben:");
                 Console.WriteLine();
                 foreach (var konyv in ifjusagi)
                 {
